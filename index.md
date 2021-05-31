@@ -12,3 +12,5 @@ Available pages
 - <https://laroche.github.io/trading-gmbh>
 - <https://laroche.github.io/private-geldanlage>
 
+See also <https://github.com/laroche/>.
+
