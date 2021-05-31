@@ -1,6 +1,5 @@
 ---
 title: laroche.github.io
-subject: Homepage Florian La Roche
 author: Florian La Roche
 linkcolor: blue
 ---
