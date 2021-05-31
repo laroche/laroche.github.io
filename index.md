@@ -1,15 +1,13 @@
 ---
-title: Homepage laroche.github.io
-subject: Homepage laroche.github.io
+title: laroche.github.io
+subject: Homepage Florian La Roche
 author: Florian La Roche
-lang: de
 linkcolor: blue
-book: true
 ---
 
 
-Links
------
+Available pages
+---------------
 
 - <https://laroche.github.io/arm-devel-infrastructure>
 - <https://laroche.github.io/trading-gmbh>
