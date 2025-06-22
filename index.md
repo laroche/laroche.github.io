@@ -22,7 +22,8 @@ Finanzen
   <https://knorke2.homedns.org/depot-pnl/>
 
 
-See also <https://github.com/laroche/>.
+See also <https://github.com/laroche/> and <https://salsa.debian.org/laroche/>.
+
 
 [Impressum](/impressum)
 
