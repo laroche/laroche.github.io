@@ -107,6 +107,12 @@ MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
 </pre>
 
 
+hermes agent
+------------
+
+<https://github.com/nousresearch/hermes-agent>
+
+
 opencode
 --------
 
