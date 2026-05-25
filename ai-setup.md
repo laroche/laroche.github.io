@@ -23,7 +23,7 @@ Install [llama.cpp](https://github.com/ggml-org/llama.cpp), see also <https://ll
 sudo apt-get update
 sudo apt-get install -y pciutils build-essential cmake curl libcurl4-openssl-dev
 git clone https://github.com/ggml-org/llama.cpp
-cmake llama.cpp -B llama.cpp/build -DBUILD_SHARED_LIBS=OFF
+cmake llama.cpp -B llama.cpp/build -DBUILD_SHARED_LIBS=OFF #-DGGML_CUDA=ON
 cmake --build llama.cpp/build --config Release -j --clean-first --target llama-cli llama-mtmd-cli llama-server llama-gguf-split
 cp llama.cpp/build/bin/llama-* llama.cpp
 </pre>
@@ -123,6 +123,12 @@ opencode config set model http://localhost:8080/v1
 opencode config set api-key "not-needed"
 opencode
 </pre>
+
+
+sashiko
+-------
+
+[Sashiko](https://github.com/sashiko-dev/sashiko) is an agentic Linux kernel code review system.
 
 
 [Impressum](/impressum)
