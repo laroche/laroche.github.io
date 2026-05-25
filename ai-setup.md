@@ -125,6 +125,13 @@ opencode
 </pre>
 
 
+openclaw
+--------
+
+Not running this myself, but you might want to check out:
+<https://openclaw.ai/>
+
+
 sashiko
 -------
 
@@ -132,4 +139,3 @@ sashiko
 
 
 [Impressum](/impressum)
-
