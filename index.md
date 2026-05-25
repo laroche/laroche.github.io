@@ -10,6 +10,8 @@ Tech
 
 - Debian Linux installations for amd64 and ARM:
   <https://laroche.github.io/arm-devel-infrastructure>
+  with main script to configure Debian/Ubuntu at
+  [setup.sh](https://github.com/laroche/arm-devel-infrastructure/blob/master/vmdb2-debian/setup.sh).
 
 
 Finanzen
@@ -18,7 +20,9 @@ Finanzen
 - Infosammlung zur [privaten Geldanlage](https://laroche.github.io/private-geldanlage)
 - Geldanlage in einer GmbH: [Trading-GmbH.pdf](https://laroche.github.io/trading-gmbh/Trading-GmbH.pdf)
 - steuerliche Auswertung der Transaktionen beim Broker Tastyworks: [tastyworks-pnl](https://github.com/laroche/tastyworks-pnl)
-- Interactive-Brokers TWS Info-Skript: [tws-api-examples](https://github.com/laroche/tws-api-examples)
+- steuerliche Auswertung der Transaktionen bei Interactive Brokers: [ibkr-steuer](https://github.com/KonvexInvestment/ibkr-steuer)
+- Interactive-Brokers TWS Info-Skripte: [tws-api-examples](https://github.com/laroche/tws-api-examples)
+  with an overview output of a portfolio at [ib-info.py](https://github.com/laroche/tws-api-examples/blob/main/ib-info.py).
 
 
 See also <https://github.com/laroche/> and <https://salsa.debian.org/laroche/>.
