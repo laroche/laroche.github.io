@@ -52,10 +52,16 @@ See also:
 - <https://unsloth.ai/docs/models/qwen3.6>
 
 
-Start script (opens a server on your local machine on port 8001 and
-uses 12 threads, which you might want to adjust for your local hardware):
+Start script:
 <pre>
 #!/bin/bash
+
+SERVERHOST="127.0.0.1"
+#SERVERHOST="0.0.0.0"
+SERVERPORT="8080"
+
+# Number of threads to run concurrently. Adjust to local hardware.
+THREADS="12"
 
 MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
 #MODEL="unsloth/Qwen3.6-27B-GGUF"
@@ -71,9 +77,9 @@ MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
     --spec-type draft-mtp --spec-draft-n-max 2 \
     --reasoning on \
     --chat-template-kwargs '{"preserve_thinking":true}' \
-    --threads 12 \
-    --host 0.0.0.0 \
-    --port 8001
+    --threads $THREADS \
+    --host $SERVERHOST \
+    --port $SERVERPORT
 
     # 2>&1 | tee startup.sh.LOG.$BASHPID
 
@@ -104,6 +110,7 @@ MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
 opencode
 --------
 
+See <https://opencode.ai/>.
 <pre>
 npm install -g @opencode/cli
 opencode config set model http://localhost:8080/v1
