@@ -12,6 +12,7 @@ Tech
   <https://laroche.github.io/arm-devel-infrastructure>
   with main script to configure Debian/Ubuntu at
   [setup.sh](https://github.com/laroche/arm-devel-infrastructure/blob/master/vmdb2-debian/setup.sh).
+- [experimental AI setup](ai-setup.md)
 
 
 Finanzen
