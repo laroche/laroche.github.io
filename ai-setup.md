@@ -13,6 +13,7 @@ with 64 GB of RAM (32 GB should also be ok).
 If you can afford some more hardware, consider looking into
 [NVIDIA DGX Spark](https://www.hardwareluxx.de/index.php/artikel/hardware/komplettsysteme/68662-nvidia-dgx-spark-der-ki-mini-pc-im-praxiseinsatz.html).
 Hier also some German [Heise-News about Nvidia DGX Spark](https://www.heise.de/news/Duell-der-KI-Kisten-Nvidia-DGX-Spark-vs-AMD-Strix-Halo-11079206.html).
+Or as an alternative, check out AMD Strix Halo hardware.
 
 
 llama.cpp
@@ -29,6 +30,13 @@ cp llama.cpp/build/bin/llama-* llama.cpp
 </pre>
 (As an alternative, look into running [vllm](https://github.com/vllm-project/vllm).)
 
+
+large language model (llm)
+--------------------------
+
+Depending on hardware and on task, you might choose between differnet llm models.
+qwen3.6 is pretty new and has good quality.
+
 Install qwen3.6 from huggingface:
 <pre>
 sudo apt-get update
@@ -44,6 +52,9 @@ MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
 #MODEL="unsloth/Qwen3.6-35B-A3B-GGUF"
 hf download $MODEL --include "*mmproj-BF16*" --include "*UD-Q6_K_XL*"
 </pre>
+
+If you want to speed things up, consider changing from Q6 to Q4 and also
+downgrading from Qwen3.6-27B-MTP-GGUF to Qwen3.6-35B-A3B-GGUF.
 
 See also:
 
