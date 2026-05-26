@@ -34,7 +34,7 @@ cp llama.cpp/build/bin/llama-* llama.cpp
 large language model (llm)
 --------------------------
 
-Depending on hardware and on task, you might choose between differnet llm models.
+Depending on hardware and on task, you might choose between different llm models.
 qwen3.6 is pretty new and has good quality.
 
 Install qwen3.6 from huggingface:
@@ -150,4 +150,3 @@ sashiko
 
 
 [Impressum](/impressum)
-
