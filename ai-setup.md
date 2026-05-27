@@ -37,6 +37,10 @@ large language model (llm)
 Depending on hardware and on task, you might choose between different llm models.
 qwen3.6 is pretty new and has good quality.
 
+
+qwen3.6
+-------
+
 Install qwen3.6 from huggingface:
 <pre>
 sudo apt-get update
