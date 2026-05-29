@@ -15,6 +15,10 @@ If you can afford some more hardware, consider looking into
 Hier also some German [Heise-News about Nvidia DGX Spark](https://www.heise.de/news/Duell-der-KI-Kisten-Nvidia-DGX-Spark-vs-AMD-Strix-Halo-11079206.html).
 Or as an alternative, check out AMD Strix Halo hardware.
 
+Other links:
+
+- <https://github.com/AI-Guru/ai_services>
+
 
 llama.cpp
 ---------
@@ -64,7 +68,10 @@ See also:
 
 - <https://chat.qwen.ai/?thinking=true>
 - <https://huggingface.co/Qwen/Qwen3.6-27B>
+- <https://huggingface.co/unsloth/Qwen3.6-27B-GGUF>
+- <https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF>
 - <https://unsloth.ai/docs/models/qwen3.6>
+- <https://github.com/AI-Guru/ai_services/blob/main/models/qwen3.6/README.md>
 
 
 Start script:
