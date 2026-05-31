@@ -7,17 +7,16 @@ linkcolor: blue
 experimental AI setup
 =====================
 
-I am running this setup without any GPU only with a normal CPU on a local PC at home
-with 64 GB of RAM (32 GB should also be ok).
-
-If you can afford some more hardware, consider looking into
+If you can privately afford some more hardware, consider looking into
 [NVIDIA DGX Spark](https://www.hardwareluxx.de/index.php/artikel/hardware/komplettsysteme/68662-nvidia-dgx-spark-der-ki-mini-pc-im-praxiseinsatz.html).
-Hier also some German [Heise-News about Nvidia DGX Spark](https://www.heise.de/news/Duell-der-KI-Kisten-Nvidia-DGX-Spark-vs-AMD-Strix-Halo-11079206.html).
+Hier also a German article [Heise-News about Nvidia DGX Spark](https://www.heise.de/news/Duell-der-KI-Kisten-Nvidia-DGX-Spark-vs-AMD-Strix-Halo-11079206.html).
 Or as an alternative, check out AMD Strix Halo hardware.
 
 Other links:
 
-- <https://github.com/AI-Guru/ai_services>
+- <https://github.com/AI-Guru/ai_services> from Dr. Tristan Behrens
+- TODO: <https://github.com/AI-Guru/ai_services/commit/394927cd2a1e90773b25fb12f1173a5dbe40ce66>
+- TODO: <https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/?tl=de>
 
 
 llama.cpp
@@ -32,7 +31,36 @@ cmake llama.cpp -B llama.cpp/build -DBUILD_SHARED_LIBS=OFF #-DGGML_CUDA=ON
 cmake --build llama.cpp/build --config Release -j --clean-first --target llama-cli llama-mtmd-cli llama-server llama-gguf-split
 cp llama.cpp/build/bin/llama-* llama.cpp
 </pre>
-(As an alternative, look into running [vllm](https://github.com/vllm-project/vllm).)
+
+
+vllm
+----
+
+An alternative to llama.cpp is [vllm](https://github.com/vllm-project/vllm).
+It is often used in server setups, but supports fewer llm models and often also
+lacks newer features.
+
+
+huggingface
+-----------
+
+llama.cpp can download llm models automatically on startup, but you might
+also want to download models separately from <https://huggingface.co/>:
+
+<pre>
+sudo apt-get update
+sudo apt-get install -y python3-venv
+python3 -m venv venv
+. venv/bin/activate
+pip3 install huggingface_hub hf_transfer
+hf cache list
+hf models list
+MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
+#MODEL="unsloth/Qwen3.6-27B-GGUF"
+#MODEL="unsloth/Qwen3.6-35B-A3B-GGUF"
+hf models info $MODEL
+hf download $MODEL --include "*mmproj-BF16*" --include "*UD-Q6_K_XL*"
+</pre>
 
 
 large language model (llm)
@@ -45,28 +73,10 @@ qwen3.6 is pretty new and has good quality.
 qwen3.6
 -------
 
-Install qwen3.6 from huggingface:
-<pre>
-sudo apt-get update
-sudo apt-get install -y python3-venv
-python3 -m venv venv
-. venv/bin/activate
-pip3 install huggingface_hub hf_transfer
-hf cache list
-hf models list
-hf models info unsloth/Qwen3.6-27B-MTP-GGUF
-MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
-#MODEL="unsloth/Qwen3.6-27B-GGUF"
-#MODEL="unsloth/Qwen3.6-35B-A3B-GGUF"
-hf download $MODEL --include "*mmproj-BF16*" --include "*UD-Q6_K_XL*"
-</pre>
-
-If you want to speed things up, consider changing from Q6 to Q4 and also
-downgrading from Qwen3.6-27B-MTP-GGUF to Qwen3.6-35B-A3B-GGUF.
-
 See also:
 
 - <https://chat.qwen.ai/?thinking=true>
+- <https://github.com/QwenLM/Qwen3.6>
 - <https://huggingface.co/Qwen/Qwen3.6-27B>
 - <https://huggingface.co/unsloth/Qwen3.6-27B-GGUF>
 - <https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF>
@@ -128,11 +138,16 @@ MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
 # --alias unsloth/Qwen3.6-35B-A3B-GGUF \
 </pre>
 
+If you want to speed things up, consider changing from Q6 to Q4 and also
+downgrading from Qwen3.6-27B-MTP-GGUF to Qwen3.6-35B-A3B-GGUF.
+
 
 hermes agent
 ------------
 
-<https://github.com/nousresearch/hermes-agent>
+- <https://hermes-agent.nousresearch.com/>
+- <https://hermes-agent.nousresearch.com/docs/>
+- <https://github.com/nousresearch/hermes-agent>
 
 
 opencode
