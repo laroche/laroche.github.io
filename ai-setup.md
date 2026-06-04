@@ -15,8 +15,11 @@ Or as an alternative, check out AMD Strix Halo hardware.
 Other links:
 
 - <https://github.com/AI-Guru/ai_services> from Dr. Tristan Behrens
+- <https://clarifai.com/blog/ilama.cpp>
 - TODO: <https://github.com/AI-Guru/ai_services/commit/394927cd2a1e90773b25fb12f1173a5dbe40ce66>
 - TODO: <https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/?tl=de>
+- TODO: look into --metrics with prometheus-compatible data: <https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md>
+- TODO: check out presets for several HF models: <https://github.com/ggml-org/llama.cpp/blob/master/docs/preset.md>
 
 
 llama.cpp
@@ -31,6 +34,8 @@ cmake llama.cpp -B llama.cpp/build -DBUILD_SHARED_LIBS=OFF #-DGGML_CUDA=ON
 cmake --build llama.cpp/build --config Release -j --clean-first --target llama-cli llama-mtmd-cli llama-server llama-gguf-split
 cp llama.cpp/build/bin/llama-* llama.cpp
 </pre>
+
+For CPU-only setups, please also check: <https://github.com/ikawrakow/ik_llama.cpp>.
 
 
 vllm
