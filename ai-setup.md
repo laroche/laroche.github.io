@@ -46,6 +46,9 @@ lacks newer features.
 huggingface
 -----------
 
+- <https://huggingface.co/>
+- <https://www.linkedin.com/company/huggingface/>
+
 llama.cpp can download llm models automatically on startup, but you might
 also want to download models separately from <https://huggingface.co/>.
 
@@ -78,9 +81,10 @@ Depending on hardware and on task, you might choose between different llm models
 qwen3.6 is pretty new and has good quality.
 
 
-qwen3.6:
+qwen3.6 from Alibaba:
 
 - <https://chat.qwen.ai/?thinking=true>
+- <https://www.linkedin.com/company/qwen/>
 - <https://github.com/QwenLM/Qwen3.6>
 - <https://huggingface.co/Qwen/Qwen3.6-27B>
 - <https://huggingface.co/unsloth/Qwen3.6-27B-GGUF>
@@ -97,6 +101,7 @@ downgrading from Qwen3.6-27B-MTP-GGUF to Qwen3.6-35B-A3B-GGUF.
 GLM:
 
 - <https://z.ai/>
+- <https://en.wikipedia.org/wiki/Z.ai>
 - <https://huggingface.co/unsloth/GLM-5.1-GGUF>
 - <https://unsloth.ai/docs/models/glm-5.1>
 - <https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF>
