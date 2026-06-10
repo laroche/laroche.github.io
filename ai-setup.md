@@ -22,18 +22,15 @@ Other links:
 - TODO: check out presets for several HF models: <https://github.com/ggml-org/llama.cpp/blob/master/docs/preset.md>
 
 
+For a shell startup script that downloads software and models, please look at
+<https://github.com/laroche/laroche.github.io/blob/master/startup.sh>.
+
+
 llama.cpp
 ---------
 
-Install [llama.cpp](https://github.com/ggml-org/llama.cpp), see also <https://llama-cpp.com/>:
-<pre>
-sudo apt-get update
-sudo apt-get install -y pciutils build-essential cmake curl libcurl4-openssl-dev
-git clone https://github.com/ggml-org/llama.cpp
-cmake llama.cpp -B llama.cpp/build -DBUILD_SHARED_LIBS=OFF #-DGGML_CUDA=ON
-cmake --build llama.cpp/build --config Release -j --clean-first --target llama-cli llama-mtmd-cli llama-server llama-gguf-split
-cp llama.cpp/build/bin/llama-* llama.cpp
-</pre>
+Install [llama.cpp](https://github.com/ggml-org/llama.cpp), see also <https://llama-cpp.com/>.
+(The above startup.sh script also installs llama.cpp.)
 
 For CPU-only setups, please also check: <https://github.com/ikawrakow/ik_llama.cpp>.
 
@@ -50,7 +47,9 @@ huggingface
 -----------
 
 llama.cpp can download llm models automatically on startup, but you might
-also want to download models separately from <https://huggingface.co/>:
+also want to download models separately from <https://huggingface.co/>.
+
+All downloads are stored by default in <tt>~/.cache/huggingface/hub</tt>.
 
 <pre>
 sudo apt-get update
@@ -58,6 +57,7 @@ sudo apt-get install -y python3-venv
 python3 -m venv venv
 . venv/bin/activate
 pip3 install huggingface_hub hf_transfer
+
 hf cache list
 hf models list
 MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
@@ -75,76 +75,28 @@ Depending on hardware and on task, you might choose between different llm models
 qwen3.6 is pretty new and has good quality.
 
 
-qwen3.6
--------
-
-See also:
+qwen3.6:
 
 - <https://chat.qwen.ai/?thinking=true>
 - <https://github.com/QwenLM/Qwen3.6>
 - <https://huggingface.co/Qwen/Qwen3.6-27B>
 - <https://huggingface.co/unsloth/Qwen3.6-27B-GGUF>
 - <https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF>
+- <https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF>
+- <https://huggingface.co/unsloth/Qwen3-Coder-Next-GGUF>
 - <https://unsloth.ai/docs/models/qwen3.6>
 - <https://github.com/AI-Guru/ai_services/blob/main/models/qwen3.6/README.md>
 
-
-Start script:
-<pre>
-#!/bin/bash
-
-SERVERHOST="127.0.0.1"
-#SERVERHOST="0.0.0.0"
-SERVERPORT="8080"
-
-# Number of threads to run concurrently. Adjust to local hardware.
-THREADS="12"
-
-MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
-#MODEL="unsloth/Qwen3.6-27B-GGUF"
-#MODEL="unsloth/Qwen3.6-35B-A3B-GGUF"
-
-./llama.cpp/llama-server \
-    -hf $MODEL:UD-Q6_K_XL \
-    --temp 0.6 \
-    --top-k 20 \
-    --top-p 0.95 \
-    --min-p 0.00 \
-    --presence-penalty 0.0 \
-    --spec-type draft-mtp --spec-draft-n-max 2 \
-    --reasoning on \
-    --chat-template-kwargs '{"preserve_thinking":true}' \
-    --threads $THREADS \
-    --host $SERVERHOST \
-    --port $SERVERPORT
-
-    # 2>&1 | tee startup.sh.LOG.$BASHPID
-
-#    --image-min-tokens 1024 \
-#    --no-mmap --mlock \
-#    --ctx-size 81920 \
-#    --ctx-size 262144 \
-#    -ctk q4_0 -ctv q4_0 \
-#    --parallel -1 \
-#    --no-mmproj \
-
-#    --temp 1.0 \
-#    --presence_penalty 1.5 \
-# For precise coding tasks, change to:
-#    --temp 0.6 \
-#    --presence_penalty 0.0 \
-
-# Instead of -hf param:
-# --model unsloth/Qwen3.6-27B-GGUF/Qwen3.6-27B-UD-Q6_K_XL.gguf \
-# --mmproj unsloth/Qwen3.6-27B-GGUF/mmproj-BF16.gguf \
-# --alias unsloth/Qwen3.6-27B-GGUF \
-# --model unsloth/Qwen3.6-35B-A3B-GGUF/Qwen3.6-35B-A3B-UD-Q6_K_XL.gguf \
-# --mmproj unsloth/Qwen3.6-35B-A3B-GGUF/mmproj-BF16.gguf \
-# --alias unsloth/Qwen3.6-35B-A3B-GGUF \
-</pre>
-
 If you want to speed things up, consider changing from Q6 to Q4 and also
 downgrading from Qwen3.6-27B-MTP-GGUF to Qwen3.6-35B-A3B-GGUF.
+
+
+GLM:
+
+- <https://z.ai/>
+- <https://huggingface.co/unsloth/GLM-5.1-GGUF>
+- <https://unsloth.ai/docs/models/glm-5.1>
+- <https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF>
 
 
 hermes agent
