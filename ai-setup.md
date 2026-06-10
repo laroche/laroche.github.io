@@ -22,7 +22,7 @@ Other links:
 - TODO: check out presets for several HF models: <https://github.com/ggml-org/llama.cpp/blob/master/docs/preset.md>
 
 
-For a shell startup script that downloads software and models, please look at
+For a shell startup script that downloads/updates software and models, please look at
 <https://github.com/laroche/laroche.github.io/blob/master/startup.sh>.
 
 
@@ -50,6 +50,9 @@ llama.cpp can download llm models automatically on startup, but you might
 also want to download models separately from <https://huggingface.co/>.
 
 All downloads are stored by default in <tt>~/.cache/huggingface/hub</tt>.
+
+The huggingface software support can be installed with <tt>./startup.sh --install-hf</tt>
+or via the following few lines:
 
 <pre>
 sudo apt-get update

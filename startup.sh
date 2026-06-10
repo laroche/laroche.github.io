@@ -33,6 +33,17 @@ CUDA=0
 # -------------------------------------------------------------
 # Below is implementation, no more configuration.
 
+if test "X$1" = "X--install-hf" ; then
+  echo "Installing huggingface support."
+  sudo apt-get update
+  sudo apt-get install -y python3-venv
+  python3 -m venv venv
+  . venv/bin/activate
+  pip3 install huggingface_hub hf_transfer
+  exit 0
+fi
+
+
 UPDATE_SOFTWARE=0
 if ! test -d llama.cpp ; then
   UPDATE_SOFTWARE=1
