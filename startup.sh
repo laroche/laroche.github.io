@@ -82,12 +82,13 @@ fi
 if echo $MODEL | grep -q Qwen ; then
   MODEL_EXTRA_ARGS=""
   if echo $MODEL | grep -q MTP-GGUF ; then
-    MODEL_EXTRA_ARGS="--flash-attn on --parallel 1 --spec-type draft-mtp --spec-draft-n-max 2"
+    MODEL_EXTRA_ARGS="$MODEL_EXTRA_ARGS --flash-attn on --parallel 1 --spec-type draft-mtp --spec-draft-n-max 2"
   fi
   ./llama.cpp/llama-server \
     -hf $MODEL \
     --temp 0.6 --top-k 20 --top-p 0.95 --min-p 0.00 --presence-penalty 0.0 \
     --reasoning on --chat-template-kwargs '{"preserve_thinking":true}' \
+    --chat-template-file qwen3.6_chat_template.jinja \
     $MODEL_EXTRA_ARGS $EXTRA_ARGS \
     --threads $THREADS --host $SERVER_HOST --port $SERVER_PORT
 elif echo $MODEL | grep -q GLM ; then
