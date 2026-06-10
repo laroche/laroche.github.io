@@ -114,6 +114,21 @@ hermes agent
 - <https://hermes-agent.nousresearch.com/docs/>
 - <https://github.com/nousresearch/hermes-agent>
 
+For local llama.cpp configuration, use <tt>http://127.0.0.1:8001/v1</tt>.
+
+Some commands:
+<pre>
+hermes update    # to update the software stack
+
+# configuration/setup:
+hermes setup
+hermes model     # just the setup for llm models
+
+hermes status
+hermes doctor
+hermes doctor --fix
+</pre>
+
 
 opencode
 --------
