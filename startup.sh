@@ -2,30 +2,16 @@
 
 # User configuration part:
 
-# https://qwen.ai/
-# https://github.com/QwenLM/Qwen3.6
-# https://huggingface.co/Qwen/Qwen3.6-27B
-# https://unsloth.ai/docs/models/qwen3.6
-# https://github.com/AI-Guru/ai_services/blob/main/models/qwen3.6/README.md
-# https://huggingface.co/unsloth/Qwen3.6-27B-MTP-GGUF
 #MODEL="unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q6_K_XL"
-# https://huggingface.co/unsloth/Qwen3.6-27B-GGUF
 #MODEL="unsloth/Qwen3.6-27B-GGUF:UD-Q6_K_XL"
-# https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF
 #MODEL="unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q6_K_XL"
-# https://huggingface.co/unsloth/Qwen3-Coder-Next-GGUF
 #MODEL="unsloth/Qwen3-Coder-Next-GGUF:UD-Q4_K_XL"
 
-# https://z.ai/
-# https://huggingface.co/unsloth/GLM-5.1-GGUF
-# https://unsloth.ai/docs/models/glm-5.1
-# https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF
 MODEL="unsloth/GLM-4.7-Flash-GGUF:UD-Q6_K_XL"
 
-#SERVER_HOST=127.0.0.1
-SERVER_HOST=0.0.0.0
-#SERVER_PORT=8080
-SERVER_PORT=8001
+SERVER_HOST=127.0.0.1
+#SERVER_HOST=0.0.0.0
+SERVER_PORT=8080
 
 # Number of CPUs available on your local hardware:
 #THREADS="-1"
