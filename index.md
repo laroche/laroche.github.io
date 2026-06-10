@@ -8,6 +8,8 @@ linkcolor: blue
 Tech
 ----
 
+- In 1996 Jurix was used as new basis for SuSE Linux: <https://de.wikipedia.org/wiki/SUSE_S.A.>
+- Enterprise RHEL work and community Fedora work for Red Hat.
 - Debian Linux installations for amd64 and ARM:
   <https://laroche.github.io/arm-devel-infrastructure>
   with main script to configure Debian/Ubuntu at
