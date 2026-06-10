@@ -14,6 +14,9 @@ Tech
   <https://laroche.github.io/arm-devel-infrastructure>
   with main script to configure Debian/Ubuntu at
   [setup.sh](https://github.com/laroche/arm-devel-infrastructure/blob/master/vmdb2-debian/setup.sh).
+- Virtualization
+   - While many companies rely on e.g. VMWare for virtualization, you should check out
+     [incus](incus.md) (used to be lxd) together with a solid Debian server setup.
 - [experimental AI setup](ai-setup.md)
 
 
