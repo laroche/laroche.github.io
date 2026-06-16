@@ -15,6 +15,7 @@ Or as an alternative, check out AMD Strix Halo hardware.
 Other links:
 
 - <https://github.com/AI-Guru/ai_services> from Dr. Tristan Behrens
+- <https://www.youtube.com/@donatocapitella/videos>
 - <https://clarifai.com/blog/ilama.cpp>
 - TODO: <https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/?tl=de>
 - TODO: look into --metrics with prometheus-compatible data: <https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md>
