@@ -75,8 +75,14 @@ if test $UPDATE_SOFTWARE = 1 ; then
   fi
   cmake llama.cpp -B llama.cpp/build -DBUILD_SHARED_LIBS=OFF $CUDA_PARAM
   #-DGGML_BLAS=OFF
-  cmake --build llama.cpp/build --config Release -j --clean-first --target llama-cli llama-mtmd-cli llama-server llama-gguf-split
+  cmake --build llama.cpp/build --config Release -j --clean-first --target llama-cli llama-mtmd-cli llama-server llama-gguf-split llama-bench
   cp llama.cpp/build/bin/llama-* llama.cpp
+fi
+
+if test "X$1" = "X--bench" ; then
+  shift
+  ./llama.cpp/llama-bench -hf $MODEL -t $THREADS
+  exit 0
 fi
 
 if echo $MODEL | grep -q Qwen ; then
