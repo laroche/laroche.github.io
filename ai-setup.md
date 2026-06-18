@@ -81,6 +81,14 @@ Depending on hardware and on task, you might choose between different llm models
 qwen3.6 is pretty new and has good quality.
 
 
+North Mini Code from Canadian company cohere:
+
+- <https://cohere.com/research>
+- <https://huggingface.co/spaces/CohereLabs/North-Mini-Code-1.0>
+- <https://huggingface.co/CohereLabs/North-Mini-Code-1.0>
+- <https://huggingface.co/unsloth/North-Mini-Code-1.0-GGUF>
+- <https://huggingface.co/blog/CohereLabs/introducing-north-mini-code>
+
 qwen3.6 from Alibaba:
 
 - <https://chat.qwen.ai/?thinking=true>
@@ -135,7 +143,7 @@ opencode
 
 See <https://opencode.ai/>.
 <pre>
-npm install -g @opencode/cli
+curl -fsSL https://opencode.ai/install | bash
 opencode config set model http://localhost:8080/v1
 opencode config set api-key "not-needed"
 opencode
