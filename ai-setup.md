@@ -149,6 +149,28 @@ opencode config set api-key "not-needed"
 opencode
 </pre>
 
+You can add your local LLM in <tt>~/.config/opencode/opencode.jsonc</tt> with:
+<pre>
+{
+  "$schema": "https://opencode.ai/config.json",
+  "provider": {
+    "dmr": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Local Model Runner",
+      "options": {
+        "baseURL": "http://127.0.0.1:8080/v1",
+        "apiKey": "no-api-key"
+      },
+      "models": {
+        "unsloth/GLM-4.7-Flash": {
+          "name": "GLM-4.7-Flash"
+        }
+      }
+    }
+  }
+}
+</pre>
+
 
 openclaw
 --------
