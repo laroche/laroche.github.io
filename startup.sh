@@ -2,6 +2,8 @@
 
 # User configuration part:
 
+#MODEL="unsloth/North-Mini-Code-1.0-GGUF:UD-Q8_K_XL"
+
 #MODEL="unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q6_K_XL"
 #MODEL="unsloth/Qwen3.6-27B-GGUF:UD-Q6_K_XL"
 #MODEL="unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q6_K_XL"
@@ -85,7 +87,13 @@ if test "X$1" = "X--bench" ; then
   exit 0
 fi
 
-if echo $MODEL | grep -q Qwen ; then
+if echo $MODEL | grep -q North-Mini-Code ; then
+  ./llama.cpp/llama-server \
+    -hf $MODEL \
+    --temp 1.0 --top-p 0.95 \
+    $EXTRA_ARGS \
+    --threads $THREADS --host $SERVER_HOST --port $SERVER_PORT
+elif echo $MODEL | grep -q Qwen ; then
   MODEL_EXTRA_ARGS=""
   if echo $MODEL | grep -q MTP-GGUF ; then
     MODEL_EXTRA_ARGS="$MODEL_EXTRA_ARGS --flash-attn on --parallel 1 --spec-type draft-mtp --spec-draft-n-max 2"
