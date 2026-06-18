@@ -9,7 +9,7 @@ experimental AI setup
 
 If you can privately afford some more hardware, consider looking into
 [NVIDIA DGX Spark](https://www.hardwareluxx.de/index.php/artikel/hardware/komplettsysteme/68662-nvidia-dgx-spark-der-ki-mini-pc-im-praxiseinsatz.html).
-Hier also a German article [Heise-News about Nvidia DGX Spark](https://www.heise.de/news/Duell-der-KI-Kisten-Nvidia-DGX-Spark-vs-AMD-Strix-Halo-11079206.html).
+Here also a German article [Heise-News about Nvidia DGX Spark](https://www.heise.de/news/Duell-der-KI-Kisten-Nvidia-DGX-Spark-vs-AMD-Strix-Halo-11079206.html).
 Or as an alternative, check out AMD Strix Halo hardware.
 
 Other links:
