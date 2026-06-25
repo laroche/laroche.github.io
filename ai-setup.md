@@ -26,11 +26,19 @@ For a shell startup script that downloads/updates software and models, please lo
 <https://github.com/laroche/laroche.github.io/blob/master/startup.sh>.
 
 
+provide OpenAI-compatibel API for local llm
+-------------------------------------------
+
+With local LLM you want to provide [OpenAI](https://platform.openai.com/)-compatibel API. This can be done via
+e.g. llama.cpp, vllm, etc.
+
+
 llama.cpp
 ---------
 
 Install [llama.cpp](https://github.com/ggml-org/llama.cpp), see also <https://llama-cpp.com/>.
-(The above startup.sh script also installs llama.cpp.)
+(The above [startup.sh](https://github.com/laroche/laroche.github.io/blob/master/startup.sh)
+script also installs llama.cpp.)
 
 For CPU-only setups, please also check: <https://github.com/ikawrakow/ik_llama.cpp>.
 
@@ -113,6 +121,16 @@ GLM:
 - <https://huggingface.co/unsloth/GLM-5.1-GGUF>
 - <https://unsloth.ai/docs/models/glm-5.1>
 - <https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF>
+
+
+Gemma from Google:
+
+- Gemma 4 26B
+
+
+Nemotron:
+
+- Nemotron 3 Nano 30B
 
 
 hermes agent
