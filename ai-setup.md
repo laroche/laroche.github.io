@@ -15,6 +15,7 @@ Or as an alternative, check out AMD Strix Halo hardware.
 Other links:
 
 - <https://github.com/AI-Guru/ai_services> from Dr. Tristan Behrens
+- <https://github.com/future-agi/future-agi>
 - <https://www.youtube.com/@donatocapitella/videos>
 - <https://clarifai.com/blog/ilama.cpp>
 - TODO: <https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/?tl=de>
@@ -114,13 +115,17 @@ If you want to speed things up, consider changing from Q6 to Q4 and also
 downgrading from Qwen3.6-27B-MTP-GGUF to Qwen3.6-35B-A3B-GGUF.
 
 
-GLM:
+GLM (Open Source):
 
 - <https://z.ai/>
 - <https://en.wikipedia.org/wiki/Z.ai>
+- <https://huggingface.co/blog/zai-org/glm-52-blog>
+- <https://huggingface.co/unsloth/GLM-5.2-GGUF>
+- <https://huggingface.co/zai-org/GLM-5.2>
 - <https://huggingface.co/unsloth/GLM-5.1-GGUF>
 - <https://unsloth.ai/docs/models/glm-5.1>
 - <https://huggingface.co/unsloth/GLM-4.7-Flash-GGUF>
+- <https://www.youtube.com/watch?v=nGVxQ_qQskI>
 
 
 Gemma from Google:
