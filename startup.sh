@@ -4,6 +4,8 @@
 
 #MODEL="unsloth/North-Mini-Code-1.0-GGUF:UD-Q8_K_XL"
 
+#MODEL="LordNeel/Agents-A1-GGUF:Q8_0"
+
 #MODEL="unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q6_K_XL"
 #MODEL="unsloth/Qwen3.6-27B-GGUF:UD-Q6_K_XL"
 #MODEL="unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q6_K_XL"
@@ -93,6 +95,13 @@ if echo $MODEL | grep -q North-Mini-Code ; then
     --temp 1.0 --top-p 0.95 \
     $EXTRA_ARGS \
     --threads $THREADS --host $SERVER_HOST --port $SERVER_PORT
+elif echo $MODEL | grep -q Agents-A1 ; then
+  ./llama.cpp/llama-server \
+    -hf $MODEL \
+    --flash-attn on -c 16384 --predict 128 --batch-size 4096 --ubatch-size 512 \
+    $EXTRA_ARGS \
+    --threads $THREADS --host $SERVER_HOST --port $SERVER_PORT
+    # -r 3 ???
 elif echo $MODEL | grep -q Qwen ; then
   MODEL_EXTRA_ARGS=""
   if echo $MODEL | grep -q MTP-GGUF ; then
