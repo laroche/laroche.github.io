@@ -6,12 +6,18 @@
 
 #MODEL="LordNeel/Agents-A1-GGUF:Q8_0"
 
+#MODEL="unsloth/Qwen3.6-27B-MTP-GGUF:Q8_0"
 #MODEL="unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q6_K_XL"
+#MODEL="unsloth/Qwen3.6-27B-GGUF:Q8_0"
 #MODEL="unsloth/Qwen3.6-27B-GGUF:UD-Q6_K_XL"
 #MODEL="unsloth/Qwen3.6-35B-A3B-GGUF:UD-Q6_K_XL"
 #MODEL="unsloth/Qwen3-Coder-Next-GGUF:UD-Q4_K_XL"
 
 MODEL="unsloth/GLM-4.7-Flash-GGUF:UD-Q6_K_XL"
+
+#MODEL="deepreinforce-ai/Ornith-1.0-35B-GGUF:Q8_0"
+
+#MODEL="unsloth/gemma-4-31B-it-GGUF:Q8_0"
 
 SERVER_HOST=127.0.0.1
 #SERVER_HOST=0.0.0.0
@@ -98,10 +104,16 @@ if echo $MODEL | grep -q North-Mini-Code ; then
 elif echo $MODEL | grep -q Agents-A1 ; then
   ./llama.cpp/llama-server \
     -hf $MODEL \
-    --flash-attn on -c 16384 --predict 128 --batch-size 4096 --ubatch-size 512 \
+    --flash-attn on -c 131072 \
     $EXTRA_ARGS \
     --threads $THREADS --host $SERVER_HOST --port $SERVER_PORT
+    #--flash-attn on --predict 128 --batch-size 4096 --ubatch-size 512 \
     # -r 3 ???
+elif echo $MODEL | grep -q Ornith ; then
+  ./llama.cpp/llama-server -hf $MODEL \
+    --flash-attn on \
+    $EXTRA_ARGS \
+    --threads $THREADS --host $SERVER_HOST --port $SERVER_PORT
 elif echo $MODEL | grep -q Qwen ; then
   MODEL_EXTRA_ARGS=""
   if echo $MODEL | grep -q MTP-GGUF ; then
@@ -118,6 +130,11 @@ elif echo $MODEL | grep -q GLM ; then
   ./llama.cpp/llama-server \
     -hf $MODEL --alias "unsloth/GLM-4.7-Flash" \
     --temp 0.7 --top-p 1.0 --min-p 0.01 --repeat-penalty 1.0 \
+    $EXTRA_ARGS \
+    --threads $THREADS --host $SERVER_HOST --port $SERVER_PORT
+elif echo $MODEL | grep -q gemma ; then
+  ./llama.cpp/llama-server -hf $MODEL \
+    --temp 1.0 --top-k 64 --top-p 0.95 \
     $EXTRA_ARGS \
     --threads $THREADS --host $SERVER_HOST --port $SERVER_PORT
 fi
