@@ -15,6 +15,7 @@ Or as an alternative, check out AMD Strix Halo hardware.
 Other links:
 
 - <https://github.com/AI-Guru/ai_services> from Dr. Tristan Behrens
+- <https://github.com/multica-ai/andrej-karpathy-skills>
 - <https://github.com/future-agi/future-agi>
 - <https://www.youtube.com/@donatocapitella/videos>
    - <https://github.com/kyuz0>
