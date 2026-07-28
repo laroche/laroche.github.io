@@ -17,6 +17,8 @@ Tech
 - Virtualization
    - While many companies rely on e.g. VMWare for virtualization, you should check out
      [incus](incus.md) (used to be lxd) together with a solid Debian server setup.
+   - Or the famous [proxmox](https://www.proxmox.com/) virtualization server.
+   - <https://precipice.tech/blog/numa-falle-virtualisierung>: numastat
 - [experimental AI setup](ai-setup.md)
 
 
