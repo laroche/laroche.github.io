@@ -17,6 +17,7 @@ Here some insights into RAM throughput and other hardware needs:
 
 Other links:
 
+- <https://canitrun.dev/>
 - <https://github.com/AI-Guru/ai_services> from Dr. Tristan Behrens
 - <https://github.com/multica-ai/andrej-karpathy-skills>
 - <https://github.com/future-agi/future-agi>
@@ -26,6 +27,8 @@ Other links:
 - TODO: <https://www.reddit.com/r/LocalLLaMA/comments/1tg6j9u/benchmarking_the_new_b9200_update_optimizing_qwen/?tl=de>
 - TODO: look into --metrics with prometheus-compatible data: <https://github.com/ggml-org/llama.cpp/blob/master/tools/server/README.md>
 - TODO: check out presets for several HF models: <https://github.com/ggml-org/llama.cpp/blob/master/docs/preset.md>
+- [heise: Lokale KI für euer Team: Kein Abo, keine Cloud, keine Ausfälle](https://www.youtube.com/watch?v=7X1vlfMT5D8)
+   - <https://gist.github.com/jamct/bb9a7ab3a38249168b05c7a831275028>
 
 
 For a shell startup script that downloads/updates software and models, please look at
@@ -141,6 +144,15 @@ Gemma from Google:
 Nemotron:
 
 - Nemotron 3 Nano 30B
+
+
+openwebui
+---------
+
+Open WebUI is an extensible, feature-rich, and user-friendly self-hosted AI platform designed to operate entirely offline:
+
+- <https://openwebui.com/>
+- <https://github.com/open-webui/open-webui>
 
 
 hermes agent
