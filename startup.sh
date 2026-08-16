@@ -6,6 +6,8 @@
 
 #MODEL="LordNeel/Agents-A1-GGUF:Q8_0"
 
+MODEL="unsloth/Qwen3.8-27B-GGUF:UD-Q6_K_XL"
+
 #MODEL="unsloth/Qwen3.6-27B-MTP-GGUF:Q8_0"
 #MODEL="unsloth/Qwen3.6-27B-MTP-GGUF:UD-Q6_K_XL"
 #MODEL="unsloth/Qwen3.6-27B-GGUF:Q8_0"
@@ -15,7 +17,7 @@
 #MODEL="unsloth/Qwen3.5-122B-A10B-GGUF:UD-Q4_K_XL"
 #MODEL="unsloth/Qwen3-Coder-Next-GGUF:UD-Q4_K_XL"
 
-MODEL="unsloth/GLM-4.7-Flash-GGUF:UD-Q6_K_XL"
+#MODEL="unsloth/GLM-4.7-Flash-GGUF:UD-Q6_K_XL"
 
 #MODEL="deepreinforce-ai/Ornith-1.0-35B-GGUF:Q8_0"
 
@@ -23,6 +25,7 @@ MODEL="unsloth/GLM-4.7-Flash-GGUF:UD-Q6_K_XL"
 
 SERVER_HOST=127.0.0.1
 #SERVER_HOST=0.0.0.0
+# 8080 is the default port right now. In the future this will move to 9931.
 SERVER_PORT=8080
 
 # Number of CPUs available on your local hardware:
@@ -120,6 +123,8 @@ elif echo $MODEL | grep -q Qwen ; then
   MODEL_EXTRA_ARGS=""
   if echo $MODEL | grep -q Coder ; then
     MODEL_EXTRA_ARGS="$MODEL_EXTRA_ARGS --temp 1.0 --top-k 40 --top-p 0.95 --min-p 0.00 --presence-penalty 0.0"
+  elif echo $MODEL | grep -q 3.8 ; then
+    MODEL_EXTRA_ARGS="$MODEL_EXTRA_ARGS --temp 1.0 --top-k 20 --top-p 0.95 --min-p 0.00 --presence-penalty 0.0"
   else
     MODEL_EXTRA_ARGS="$MODEL_EXTRA_ARGS --temp 0.6 --top-k 20 --top-p 0.95 --min-p 0.00 --presence-penalty 0.0"
   fi

@@ -83,9 +83,7 @@ pip3 install huggingface_hub hf_transfer
 
 hf cache list
 hf models list
-MODEL="unsloth/Qwen3.6-27B-MTP-GGUF"
-#MODEL="unsloth/Qwen3.6-27B-GGUF"
-#MODEL="unsloth/Qwen3.6-35B-A3B-GGUF"
+MODEL="unsloth/Qwen3.8-27B-GGUF"
 hf models info $MODEL
 hf download $MODEL --include "*mmproj-BF16*" --include "*UD-Q6_K_XL*"
 </pre>
@@ -106,10 +104,11 @@ North Mini Code from Canadian company cohere:
 - <https://huggingface.co/unsloth/North-Mini-Code-1.0-GGUF>
 - <https://huggingface.co/blog/CohereLabs/introducing-north-mini-code>
 
-qwen3.6 from Alibaba:
+qwen3.8, 3.6, 3.5 from Alibaba:
 
 - <https://chat.qwen.ai/?thinking=true>
 - <https://www.linkedin.com/company/qwen/>
+- <https://huggingface.co/Qwen/Qwen3.8-27B>
 - <https://github.com/QwenLM/Qwen3.6>
 - <https://huggingface.co/Qwen/Qwen3.6-27B>
 - <https://huggingface.co/unsloth/Qwen3.6-27B-GGUF>
