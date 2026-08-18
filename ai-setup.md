@@ -174,6 +174,10 @@ hermes model     # just the setup for llm models
 hermes status
 hermes doctor
 hermes doctor --fix
+cd ~/.hermes/hermes-agent && npm audit fix
+cd ~/.hermes/hermes-agent && npm audit fix --force
+cd ~/.hermes/hermes-agent && npm update --package-lock-only
+cd ~/.hermes/hermes-agent && rm -f package-lock.json && npm install
 </pre>
 
 
