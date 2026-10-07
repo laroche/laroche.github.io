@@ -60,6 +60,12 @@ It is often used in server setups, but supports fewer llm models and often also
 lacks newer features.
 
 
+strata
+------
+
+Another alternative is <https://github.com/Niko1221/Strata>.
+
+
 huggingface
 -----------
 
