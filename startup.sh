@@ -92,6 +92,7 @@ if test $UPDATE_SOFTWARE = 1 ; then
   #-DGGML_BLAS=OFF
   cmake --build llama.cpp/build --config Release -j --clean-first --target llama-cli llama-mtmd-cli llama-server llama-gguf-split llama-bench
   cp llama.cpp/build/bin/llama-* llama.cpp
+  exit 0
 fi
 
 if test "X$1" = "X--bench" ; then
