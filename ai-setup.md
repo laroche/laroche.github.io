@@ -18,7 +18,7 @@ Here some insights into RAM throughput and other hardware needs:
 Other links:
 
 - <https://canitrun.dev/>
-- <https://github.com/AI-Guru/ai_services> from Dr. Tristan Behrens
+- <https://github.com/AI-Guru/> from Dr. Tristan Behrens
 - <https://github.com/multica-ai/andrej-karpathy-skills>
 - <https://github.com/future-agi/future-agi>
 - <https://www.youtube.com/@donatocapitella/videos>
@@ -122,7 +122,6 @@ qwen3.8, 3.6, 3.5 from Alibaba:
 - <https://huggingface.co/unsloth/Qwen3.6-35B-A3B-GGUF>
 - <https://huggingface.co/unsloth/Qwen3-Coder-Next-GGUF>
 - <https://unsloth.ai/docs/models/qwen3.6>
-- <https://github.com/AI-Guru/ai_services/blob/main/models/qwen3.6/README.md>
 
 If you want to speed things up, consider changing from Q6 to Q4 and also
 downgrading from Qwen3.6-27B-MTP-GGUF to Qwen3.6-35B-A3B-GGUF.
