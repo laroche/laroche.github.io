@@ -20,6 +20,7 @@ Tech
    - Or the famous [proxmox](https://www.proxmox.com/) virtualization server.
    - <https://precipice.tech/blog/numa-falle-virtualisierung>: numastat
 - [experimental AI setup](ai-setup.md)
+- network tests: <https://github.com/vincentbernat/network-lab>
 
 
 Finanzen
